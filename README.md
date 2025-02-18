@@ -1,3 +1,63 @@
+## Backend - Firebase Functions
+
+## Tecnologías Utilizadas
+
+Express: Framework para manejar rutas y controladores.
+
+Firebase Admin SDK: Interacción con Firebase services.
+
+Firebase Functions: Backend serverless para alojar las funciones en la nube.
+
+PostgreSQL (pg): Conector para interactuar con la base de datos.
+
+dotenv: Gestión de variables de entorno.
+
+reflect-metadata: Uso de decoradores en TypeScript.
+
+## Scripts Disponibles
+
+npm run build: Compila el código TypeScript.
+
+npm run serve: Inicia los emuladores de Firebase.
+
+npm run shell: Inicia una shell interactiva para funciones.
+
+npm run deploy: Despliega las funciones a Firebase.
+
+npm run logs: Muestra los logs de Firebase Functions.
+
+## Estructura del Proyecto
+
+src/
+ ├── app.ts
+ ├── index.ts
+ ├── config/
+ │    └── firebase.ts
+ ├── controllers/
+ │    ├── task.controller.ts
+ │    └── user.controller.ts
+ ├── entities/
+ │    ├── task.entity.ts
+ │    └── user.entity.ts
+ ├── repositories/
+ │    ├── task.repository.ts
+ │    └── user.repository.ts
+ └── services/
+      ├── task.service.ts
+      └── user.service.ts
+
+# Decisiones de Diseño
+
+Modularización: Separación clara entre controladores, servicios, repositorios y entidades.
+
+Middleware de Autenticación: Se utiliza authMiddleware.ts para proteger rutas sensibles.
+
+Interacción con Firebase: Configuración centralizada en firebase.ts.
+
+# Despliegue
+
+Las funciones están alojadas en Firebase Functions y pueden ser ejecutadas de manera local con los comandos indicados arriba.
+
 # Endpoints de la API
  # Autenticación
         POST /api/users/register:   Registra un nuevo usuario.
